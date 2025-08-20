@@ -1,11 +1,10 @@
-// src/components/contact/parts/FormInput.jsx
 import React, { useState } from 'react'
 
 export default function FormInput({ onSuccess, onError }) {
   const [values, setValues] = useState({ name: '', email: '', message: '' })
   const [sending, setSending] = useState(false)
 
-  // Poné acá tu URL de Google Apps Script (la de /exec)
+  
   const ENDPOINT = 'https://script.google.com/macros/s/AKfycby-9SH0qxlbV5zJvNaSyxRG64_Jn43Lc5WRRKT9E6hw9dapq48bwDupULFNXFMGjpBFGg/exec'
 
   const onChange = (e) =>
@@ -32,7 +31,7 @@ export default function FormInput({ onSuccess, onError }) {
     } catch (err) {
       console.error('error', err)
       onError?.(err)
-      // opcional: alert('No se pudo enviar. Probá más tarde.')
+      
     } finally {
       setSending(false)
     }
