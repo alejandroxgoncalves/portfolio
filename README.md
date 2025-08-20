@@ -52,5 +52,5 @@ predeploy: npm run build
 
 👤 Autor
 Alejandro Xavier Goncalves – Salto, Uruguay
-📧 alejandroxaviergoncalves16@gmail.com
+📧 alejandroxavier1121@gmail.com
 🔗 LinkedIn: www.linkedin.com/in/alejandro-xavier-goncalves · GitHub: https://github.com/alejandroxgoncalves
