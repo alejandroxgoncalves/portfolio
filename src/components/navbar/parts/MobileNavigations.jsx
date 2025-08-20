@@ -8,7 +8,7 @@ const MobileNavigations = ({active, setActive}) => {
 
 
       <li><a href="#about" className='transition-all duration-300 border
-      border-sky-600 text-sky-600 px-5 py-4 hover:bg-sky-600 hover:text-white' onClick={() => setActive(active => !active)}>Sobre mi</a></li>
+      border-sky-600 text-sky-600 px-5 py-4 hover:bg-sky-600 hover:text-white' onClick={() => setActive(active => !active)}>Sobre mí</a></li>
 
 
       <li><a href="#skills" className='transition-all duration-300 border

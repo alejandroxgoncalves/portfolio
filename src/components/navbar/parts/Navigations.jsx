@@ -4,7 +4,7 @@ const Navigations = () => {
   return (
     <ul className='hidden justify-around items-center sm:flex'>
         <li><a href="#home" className='nav-menu'>Inicio</a></li>
-        <li><a href="#about" className='nav-menu'>Sobre Mi</a></li>
+        <li><a href="#about" className='nav-menu'>Sobre Mí</a></li>
         <li><a href="#skills" className='nav-menu'>Habilidades</a></li>
         <li><a href="#projects" className='nav-menu'>Proyectos</a></li>
 

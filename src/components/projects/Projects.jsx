@@ -1,27 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
+import { asset } from "../../lib/asset"; // <- ajustá si tu ruta es distinta
 
-/* ========= RUTAS DESDE /public/assets/img ========= */
 // Pokédex
-const pokedexInicio  = "/assets/img/pokedex-inicio.png";
-const pokedexFab     = "/assets/img/pokedex-fab.png";
-const pokedexFabs    = "/assets/img/pokedex-fabs.png";
+const pokedexInicio = asset("assets/img/pokedex-inicio.png");
+const pokedexFab    = asset("assets/img/pokedex-fab.png");
+const pokedexFabs   = asset("assets/img/pokedex-fabs.png");
 
 // Consultados (trivia)
-const consultadosInicio    = "/assets/img/consultados-inicio.png";
-const consultadosFin       = "/assets/img/consultados-fin.png";
-const consultadosPerdiste  = "/assets/img/consultados-perdiste.png";
+const consultadosInicio   = asset("assets/img/consultados-inicio.png");
+const consultadosFin      = asset("assets/img/consultados-fin.png");
+const consultadosPerdiste = asset("assets/img/consultados-perdiste.png");
 
 // Inmobiliaria (admin)
-const inmoCover  = "/assets/img/inmb.png";
-const inmoCover2 = "/assets/img/inmb2.png";
+const inmoCover  = asset("assets/img/inmb.png");
+const inmoCover2 = asset("assets/img/inmb2.png");
 
 // Viajes app
-const viajes1 = "/assets/img/viajes1.png";
-const viajes2 = "/assets/img/viajes2.png";
-const viajes3 = "/assets/img/viajes3.png";
+const viajes1 = asset("assets/img/viajes1.png");
+const viajes2 = asset("assets/img/viajes2.png");
+const viajes3 = asset("assets/img/viajes3.png");
 
 // Placeholder
-const placeholder = "/assets/img/programmer.webp";
+const placeholder = asset("assets/img/programmer.webp");
 
 /* ========= SLIDER REUTILIZABLE ========= */
 function Slider({
@@ -33,7 +33,7 @@ function Slider({
 }) {
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [open, setOpen] = useState(false); // lightbox abierto/cerrado
+  const [open, setOpen] = useState(false);
   const total = images.length;
   const timer = useRef(null);
 
@@ -47,7 +47,6 @@ function Slider({
     return () => clearInterval(timer.current);
   }, [auto, delay, paused, total]);
 
-  // teclas cuando el lightbox está abierto
   useEffect(() => {
     if (!open) return;
     const prevOverflow = document.body.style.overflow;
@@ -134,7 +133,6 @@ function Slider({
           className="fixed inset-0 z-[1000] bg-black/80 backdrop-blur-sm"
           onClick={() => setOpen(false)}
         >
-          {/* Cerrar */}
           <button
             aria-label="Cerrar"
             onClick={() => setOpen(false)}
@@ -144,7 +142,6 @@ function Slider({
             ✕
           </button>
 
-          {/* Navegación */}
           {total > 1 && (
             <>
               <button
@@ -166,7 +163,6 @@ function Slider({
             </>
           )}
 
-          {/* Imagen grande */}
           <div className="absolute inset-0 flex items-center justify-center p-4">
             <img
               src={current}
@@ -181,9 +177,7 @@ function Slider({
   );
 }
 
-
-
-/* ========= TUS PROYECTOS ========= */
+/* =========  PROYECTOS ========= */
 const proyectos = [
   {
     titulo: "Pokédex App",
@@ -227,10 +221,7 @@ export default function Projects() {
             key={i}
             className="rounded-2xl overflow-hidden bg-gray-900 text-white shadow-lg ring-1 ring-white/5"
           >
-            {/* slider arriba */}
             <Slider images={p.images} altPrefix={p.titulo} />
-
-            {/* cuerpo */}
             <div className="p-6">
               <h2 className="text-xl font-semibold mb-2">{p.titulo}</h2>
               <p className="text-gray-300 mb-4">{p.descripcion}</p>
