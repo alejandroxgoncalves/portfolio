@@ -1,39 +1,56 @@
-# Portfolio React + Tailwind (Vite, JS)
+# 🌐 Portfolio — Alejandro Xavier (React + Vite + Tailwind)
 
-Plantilla lista para usar (sin TypeScript), con rutas y tarjetas de proyectos.
-
-## Requisitos
-- Node.js 18+
-- Git
-
-## Instalación
-```bash
-npm install
-npm run dev
-```
-
-## Estructura
-- `src/pages`: Inicio, Proyectos, Sobre mí, Contacto
-- `src/components`: Navbar, ProjectCard
-- `src/data/projects.js`: lista de proyectos
-- Tailwind ya configurado
-
-## Deploy en Vercel (recomendado)
-1. Subí este proyecto a GitHub (repo público).
-2. Entra a vercel.com, **New Project** → Importar tu repo.
-3. Framework: **Vite** (auto-detecta). Build: `npm run build`. Output: `dist`.
-4. Deploy y listo. Conecta dominio si querés.
-
-## Deploy en GitHub Pages (opcional)
-Podés usar `vite-plugin-gh-pages` o una acción de GitHub. Vercel es más simple.
-
-## Editables rápidos
-- `src/data/projects.js`: agregá tus proyectos.
-- `Navbar.jsx`: links y branding.
-- `Home.jsx`: tu pitch y datos.
-- `About.jsx`: resumen corto.
-- `Contact.jsx`: reemplazá el formulario por el servicio que prefieras.
+Mi portfolio personal. Muestra quién soy, mis habilidades y proyectos destacados (con código en GitHub).  
+🔴 **Online:** https://alejandroxgoncalves.github.io/portfolio/
 
 ---
 
-Hecho para: **Alejandro Xavier Goncalves** (Salto, Uruguay)
+## ✨ Qué incluye
+- Diseño responsive con **TailwindCSS**
+- Secciones: **Inicio**, **Sobre mí**, **Habilidades**, **Proyectos**, **Contacto**
+- Tarjetas y carrusel de **proyectos** con imágenes
+- Animaciones sutiles (**AOS**)
+
+---
+
+## 🧰 Stack
+- **React 18**, **Vite**
+- **TailwindCSS**
+- Icons/imagenes optimizadas (WebP)
+- Herramientas: Git, GitHub Pages
+
+---
+
+## 🏗️ Estructura
+src/
+components/
+hero/, skills/, projects/, ...
+pages/
+lib/
+asset.js # helper para rutas de imágenes (GitHub Pages)
+public/
+assets/ # imágenes y favicons
+
+---
+
+## ▶️ Correr localmente
+npm install
+npm run dev
+
+🔧 Build
+npm run build
+
+🌍 Deploy (GitHub Pages)
+Este repo está listo para Pages.
+
+vite.config.js usa base: './'
+
+Scripts en package.json:
+
+predeploy: npm run build
+
+
+👤 Autor
+Alejandro Xavier Goncalves – Salto, Uruguay
+📧 alejandroxaviergoncalves16@gmail.com
+🔗 LinkedIn: www.linkedin.com/in/alejandro-xavier-goncalves · GitHub: https://github.com/alejandroxgoncalves
